@@ -14,10 +14,8 @@ window.addEventListener('load', () => {
                     if (event.target.id === 'btnPrev'){
                         this._nextSlide = (this._currentSlide - 1) === -1 ? 2 : this._currentSlide - 1;
                     }
-
                     this.setImage(this.getImageUrl(), this._currentSlide);
-                    this.clearIntervalFunction();
-                    
+                    this.clearIntervalFunction();                   
                 } else {
                     if ((this._nextSlide-1) % 2 === 0){
                         location.href = 'catalog.html';
