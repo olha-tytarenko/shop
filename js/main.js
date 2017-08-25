@@ -9,11 +9,21 @@ window.addEventListener('load', () => {
             this._currentSlide = 0;
             this._intervalFunction;
             this._slideContainer = document.getElementById('slides');
-            this._slideContainer.addEventListener('click', () => {
-                if ((this._nextSlide-1) % 2 === 0){
-                    location.href = 'catalog.html';
+            this._slideContainer.addEventListener('click', (event) => {
+                if (event.target.type === 'button'){
+                    if (event.target.id === 'btnPrev'){
+                        this._nextSlide = (this._currentSlide - 1) === -1 ? 2 : this._currentSlide - 1;
+                    }
+
+                    this.setImage(this.getImageUrl(), this._currentSlide);
+                    this.clearIntervalFunction();
+                    
                 } else {
-                    location.href = 'item.html';
+                    if ((this._nextSlide-1) % 2 === 0){
+                        location.href = 'catalog.html';
+                    } else {
+                        location.href = 'item.html';
+                    }
                 }
             });
 
@@ -84,4 +94,5 @@ window.addEventListener('load', () => {
             }
         }
     }
+
 });

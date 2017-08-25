@@ -96,7 +96,26 @@ nav a:hover{
 
 .slides{
   min-height: 769px;
+  border-bottom:  1px solid #D9D9D9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.slides button{
+  width: 30px;
+  height: 100px;
+  border: none;
+  outline:none;
+}
+.slides button:first-child{
+  background: url('../img/slider/arrow-left.png') center center no-repeat, linear-gradient( #f14a58,  #f14a58);
+}
+
+.slides button:last-child{
+  background: url('../img/slider/arrow-right.png') center center no-repeat, linear-gradient( #f14a58,  #f14a58);
+}
+
 
 .slides:hover, .slider-nav-button:hover{
   cursor: pointer;
