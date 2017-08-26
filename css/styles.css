@@ -2,6 +2,8 @@ html{
   font-family: 'OpenSans', sans-serif;
   font-weight: bold;
   font-size: 14px;
+  min-width: 375px;
+  overflow: auto;
 }
 
 body{
@@ -13,8 +15,24 @@ header, .arrivals, footer{
   max-width: 1180px;
   margin: 0 auto;
 }
+.header-first-line .logo-mobile{
+  font-size: 2rem;
+  display: none;
+}
 
 
+
+.user-options div{
+  display: inline-block;
+}
+
+.menu-btn{
+  display: none;
+}
+.container{
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
 
 header{
   padding: 30px 0;
@@ -174,6 +192,7 @@ position: absolute;
 }
 .caps-hats{
   border-bottom: 1px solid #D9D9D9;
+  border-left: 1px solid #D9D9D9;
   background: url('../img/caps-hats.png') center bottom no-repeat;
   background-size: cover;
 }
@@ -247,7 +266,7 @@ h3{
 }
 
 .footer ul li{
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
 .additional-information .left{
@@ -255,7 +274,6 @@ h3{
 }
 
 .slider{
-  border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -267,6 +285,7 @@ h3{
 .about-us{
   font-style: italic;
   font-family: 'Crimson', sans-serif;
+  flex-basis: 70%;
 }
 
 .customer-care, .quick-links{
@@ -338,21 +357,15 @@ figcaption span, .twit-us, .about-us{
   opacity: 1;
 }
 
+.social-networks{
+  flex-basis: 100%;
+}
 
 .share span{
   background: url('../img/share-background.png') center center no-repeat;
   padding:  5px 10px 5px 15px;;
 }
 
-.triangle{
-  display: inline-block;
-  content: '';
-  width: 0;
-	height: 0;
-	border-top: 2px solid transparent;
-	border-right: 10px solid #d9d9d9;
-	border-bottom: 2px solid transparent;
-}
 
 .handbag{
   display: none;
@@ -464,7 +477,8 @@ figcaption span, .twit-us, .about-us{
   }
 
   .social-networks{
-    padding-top: 50px;;
+    padding-top: 50px;
+    flex-basis: 10%;
   }
   .footer ul li{
     padding: 0 5px;
@@ -520,16 +534,20 @@ figcaption span, .twit-us, .about-us{
   a.nike{
     border-right: 1px solid #D9D9D9;
   }
+  
+  .slides button{
+    display: none;
+  }
 
 }
 
 
-@media (min-width: 375px) and (max-width: 767px){
+@media (max-width: 767px){
   .banners a:first-child{
     flex: 1 1 100%;
   }
 
-  .handbag{
+  .handbag, .caps-hats{
     display: none;
   }
 
@@ -542,4 +560,147 @@ figcaption span, .twit-us, .about-us{
   .arrivals-goods figure {
     flex: 0 1 47%;
   }
+
+  .slides button{
+    display: none;
+  }
+
+  .arrivals button{
+    font-size: 2rem;
+    width: 50%;
+  }
+
+  .additional-information{
+    flex-direction: column;
+  }
+
+  .additional-information .left,
+  .additional-information .right{
+    border-right: none;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .additional-information .right{
+    position: relative;
+  }
+
+
+  .twit-us{
+    font-size: 0.9rem;
+  }
+
+  .additional-information .left div,
+  .additional-information .right div{
+    padding: 30px 0 0 30px;
+  }
+
+  .left{
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .right{
+    padding: 0;
+  }
+
+  .left h3, .right h3{
+    font-size: 1.2rem;
+  }
+
+  .right div:nth-child(2){
+    border-left: 1px solid #D9D9D9;
+    
+    padding-bottom: 30px;
+  }
+
+  .quick-links, .customer-care, .right div{
+    width: 50%;
+    padding-left: 10%;
+  }
+  .footer{
+    position: relative;
+    font-size: 0.8rem;
+    padding: 20px 30px;
+    margin-top: 40px;
+    border-top: 1px solid #D9D9D9;
+  }
+
+  .footer ul{
+    position: absolute;
+    top: -30px;
+  }
+
+  .mobile-group{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #D9D9D9;
+    top: -100vh;
+  }
+  .header-first-line{
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  header{
+    position: relative;
+  }
+
+  .nav-wrapper, .search{
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .nav-wrapper nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-wrapper nav a{
+    padding: 5px 0;
+    font-size: 1.4rem;
+  }
+
+  .header-first-line a.sign-in{
+    display: none;
+  }
+
+  .search input{
+    margin: 0;
+  }
+
+  .magnifier{
+    position: relative;
+    left: -25px;
+    bottom: -5px;
+  }
+
+  a.logo{
+    display: none;
+  }
+
+  .header-first-line .logo-mobile{
+    display: inline-block;
+  }
+
+  header{
+    padding-top: 5px;
+  }
+
+  .menu-btn{
+    display: inline-block;
+  }
+
+
+  .additional-information .right .social-networks{
+    width: 30%;
+    bottom: -33px;
+    right: 0;
+    position: absolute;
+    padding: 0;
+  }
+
+  .active-menu{
+    top: 73px;
+  }
+
 }

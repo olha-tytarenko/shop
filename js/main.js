@@ -14,8 +14,10 @@ window.addEventListener('load', () => {
                     if (event.target.id === 'btnPrev'){
                         this._nextSlide = (this._currentSlide - 1) === -1 ? 2 : this._currentSlide - 1;
                     }
-                    this.setImage(this.getImageUrl(), this._currentSlide);
-                    this.clearIntervalFunction();                   
+                    this.setImage(this.getImageUrl(), this._currentSlide); 
+                    this.clearIntervalFunction();  
+                    this.startSlider();
+                 
                 } else {
                     if ((this._nextSlide-1) % 2 === 0){
                         location.href = 'catalog.html';
@@ -57,17 +59,18 @@ window.addEventListener('load', () => {
         startSlider(){
             this._intervalFunction = setInterval(()=>{
                 this.setImage(this.getImageUrl(), this._currentSlide);
-            }, 5000);
+            }, 2000);
         }
 
         clearIntervalFunction(){
             clearInterval(this._intervalFunction);
         }
 
-        setImage(imgUrl, slideIndex){
+        setImage(imgUrl, slideIndex, callback){
             this._slideContainer.style.background = `url('${imgUrl}') center center no-repeat`;
             this._slideContainer.style.backgroundSize = 'cover';
-            changeSliderButtonClassName(slideIndex)
+            changeSliderButtonClassName(slideIndex);
+
         }
 
     }
@@ -92,5 +95,17 @@ window.addEventListener('load', () => {
             }
         }
     }
+
+    let menuBtn = document.getElementById('menuBtn');
+    let isOpenMenu = false;
+    menuBtn.addEventListener('click', () => {
+        let menu = document.getElementsByClassName('mobile-group')[0];
+        if(isOpenMenu){
+            menu.className = 'mobile-group';
+        } else {
+            menu.className += ' active-menu';
+        }
+        isOpenMenu = !isOpenMenu;
+    });
 
 });
