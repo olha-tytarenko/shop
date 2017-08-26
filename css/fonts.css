@@ -1,0 +1,71 @@
+@font-face{ 
+    font-family: 'Crimson'; 
+    src: url('../fonts/crimson/crimson-roman-webfont.eot');   
+    src: url('../fonts/crimson/crimson-roman-webfont.eot?iefix') format('eot'),    
+    url('../fonts/crimson/crimson-roman-webfont.woff') format('woff'),    
+    url('../fonts/crimson/crimson-roman-webfont.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face{ 
+    font-family: 'Crimson'; 
+    src: url('../fonts/crimson/crimson-semibold-webfont.eot');   
+    src: url('../fonts/crimson/crimson-semibold-webfont.eot?iefix') format('eot'),    
+    url('../fonts/crimson/crimson-semibold-webfont.woff') format('woff'),    
+    url('../fonts/crimson/crimson-semibold-webfont.ttf') format('truetype');    
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face{ 
+    font-family: 'Crimson'; 
+    src: url('../fonts/crimson/crimson-italic-webfont.eot');   
+    src: url('../fonts/crimson/crimson-italic-webfont.eot?iefix') format('eot'),    
+    url('../fonts/crimson/crimson-italic-webfont.woff') format('woff'),    
+    url('../fonts/crimson/crimson-italic-webfont.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  
+  @font-face{ 
+    font-family: 'Roboto'; 
+    src: url('../fonts/roboto/Roboto-Regular.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{ 
+    font-family: 'Roboto'; 
+    src: url('../fonts/roboto/Roboto-Medium.ttf') format('truetype');    
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face{ 
+    font-family: 'Roboto'; 
+    src: url('../fonts/roboto/Roboto-Italic.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  @font-face{ 
+    font-family: 'OpenSans'; 
+    src: url('../fonts/open-sans/OpenSans-Regular.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{ 
+    font-family: 'OpenSans'; 
+    src: url('../fonts/open-sans/OpenSans-Bold.ttf') format('truetype');    
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face{ 
+    font-family: 'OpenSans'; 
+    src: url('../fonts/open-sans/OpenSans-Italic.ttf') format('truetype');    
+    font-weight: normal;
+    font-style: italic;
+  }

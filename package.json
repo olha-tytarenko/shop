@@ -1,0 +1,23 @@
+{
+  "name": "final_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel js -d ie-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olya19/shop.git"
+  },
+  "author": "Olya Titarenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olya19/shop/issues"
+  },
+  "homepage": "https://github.com/olya19/shop#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
+  }
+}

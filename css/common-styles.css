@@ -1,0 +1,409 @@
+html{
+  font-family: 'OpenSans', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 375px;
+  overflow: auto;
+}
+  
+body{
+  width: 100%;
+   margin: 0 auto;
+}
+
+header, footer{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.header-first-line .logo-mobile{
+  font-size: 2rem;
+  display: none;
+}
+
+.user-options div{
+  display: inline-block;
+}
+
+.menu-btn{
+  display: none;
+  width: 25px;
+  height: 25px;
+  border: none;
+}
+
+.menu-btn-opened{
+  background: url('../img/ico_close.png') bottom center no-repeat;
+}
+
+.menu-btn-closed{
+  background: url('../img/ico_menu.png') bottom center no-repeat;
+}
+
+.container{
+  width: 100%;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+header{
+  padding: 30px 0;
+}
+
+.nav-wrapper, .search{
+  padding-top: 30px;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.logo{
+  font-size: 2rem;
+  display: inline-block;
+}
+.header-first-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-first-line a{
+  display: inline-block;
+}
+.user-options a{
+  padding-left: 30px;
+}
+.user-options a:first-child{
+  padding-right: 30px;
+}
+.bag{
+  background: url('../img/ico_bag.png') center left no-repeat;
+  background-size: contain;
+}
+.nav-wrapper{
+  display: inline-block;
+  width: 79%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav a:hover{
+  color:#f14a58;
+}
+
+.search{
+  display: inline-block;
+  width: 20%;
+  position: relative;
+}
+
+.search input{
+  width: 55%;
+  margin-left: 45%;
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.magnifier{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url('../img/ico-search.png') center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.additional-information{
+  display: flex;
+  justify-content: space-between;
+}
+
+.left, .right{
+  flex: 1 1 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h3{
+  font-size: 1.6rem;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  position: relative;
+}
+
+.footer li{
+  display: inline-block;
+}
+
+.footer ul li{
+  padding: 0 5px;
+}
+
+.additional-information .left{
+  border-right: 1px solid #d9d9d9;
+}
+
+
+.about-us{
+  font-style: italic;
+  font-family: 'Crimson', sans-serif;
+  flex-basis: 70%;
+}
+
+.customer-care, .quick-links{
+  padding: 50px 0;
+}
+.customer-care ul, .quick-links ul, .share span, 
+figcaption span, .twit-us, .about-us{
+  font-weight: normal;
+}
+.customer-care a:hover, .quick-links a:hover, 
+.footer ul li a:hover, .sign-in:hover, .bag:hover{
+  text-decoration: underline;
+}
+.customer-care ul li, 
+.quick-links ul li{
+  display: block;
+  padding-bottom: 20px;
+}
+.customer-care h3, 
+.quick-links h3, .right div:first-child h3, 
+.right div:nth-child(2) h3{
+  padding-bottom: 20px;
+}
+.customer-care{
+  padding-left: 30%;;
+}
+.right{
+  padding-left: 50px;
+}
+.right div:first-child, .right div:nth-child(2){
+  display: inline-block;
+  padding-top: 50px;
+}
+
+
+.right div:nth-child(2){
+  padding-left: 25%;
+}
+.twit-us{
+  padding-left: 30px;
+  background: url('../img/twi_ico.png') bottom left no-repeat;
+  background-size: contain;
+}
+
+.twitter, .facebook{
+  padding: 10px;
+  display: inline-block;
+}
+
+.twitter{
+  background: url('../img/twi.png') center center no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  margin-left: 30px;
+}
+
+.facebook{
+  background: url('../img/fb.png') center center no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+
+}
+
+.twitter:hover, .facebook:hover{
+  opacity: 1;
+}
+
+.social-networks{
+  flex-basis: 100%;
+}
+
+.share span{
+  background: url('../img/share-background.png') center center no-repeat;
+  padding:  5px 10px 5px 15px;;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+  header, footer, .footer{
+    padding: 30px 50px;
+  }
+
+  .left{
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .additional-information .left {
+    border-right: none;
+  }
+
+  .right{
+    flex-direction: column;
+  }
+  .right div:nth-child(2){
+    padding-left: 0;
+  }
+
+  .social-networks{
+    padding-top: 50px;
+    flex-basis: 10%;
+  }
+  .footer ul li{
+    padding: 0 5px;
+  }
+
+  .footer{
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 767px){
+  .additional-information{
+    flex-direction: column;
+  }
+
+  .additional-information .left,
+  .additional-information .right{
+    border-right: none;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .additional-information .right{
+    position: relative;
+  }
+
+
+  .twit-us{
+    font-size: 0.9rem;
+  }
+
+  .additional-information .left div,
+  .additional-information .right div{
+    padding: 30px 0 0 30px;
+  }
+
+  .left{
+    border-bottom: 1px solid #D9D9D9;
+  }
+  .right{
+    padding: 0;
+  }
+
+  .left h3, .right h3{
+    font-size: 1.2rem;
+  }
+
+  .right div:nth-child(2){
+    border-left: 1px solid #D9D9D9;
+    
+    padding-bottom: 30px;
+  }
+
+  .quick-links, .customer-care, .right div{
+    width: 50%;
+    padding-left: 10%;
+  }
+  .footer{
+    position: relative;
+    font-size: 0.8rem;
+    padding: 20px 30px;
+    margin-top: 40px;
+    border-top: 1px solid #D9D9D9;
+  }
+
+  .footer ul{
+    position: absolute;
+    top: -30px;
+  }
+
+  .mobile-group{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #D9D9D9;
+    top: -400px;
+  }
+  .header-first-line{
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  header{
+    position: relative;
+  }
+
+  .nav-wrapper, .search{
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .nav-wrapper nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .nav-wrapper nav a{
+    padding: 5px 0;
+    font-size: 1.4rem;
+  }
+
+  .header-first-line a.sign-in{
+    display: none;
+  }
+
+  .search input{
+    margin: 0;
+  }
+
+  .magnifier{
+    position: relative;
+    left: -25px;
+    bottom: -5px;
+  }
+
+  a.logo{
+    display: none;
+  }
+
+  .header-first-line .logo-mobile{
+    display: inline-block;
+  }
+
+  header{
+    padding-top: 5px;
+  }
+
+  .menu-btn{
+    display: inline-block;
+  }
+
+  .additional-information .right .social-networks{
+    width: 30%;
+    bottom: -33px;
+    right: 0;
+    position: absolute;
+    padding: 0;
+  }
+
+  .active-menu{
+    top: 73px;
+  }
+  .about-us{
+    display: none;
+  }
+}
