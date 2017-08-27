@@ -1,0 +1,165 @@
+.filters, .catalog{
+    max-width: 1180px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+
+
+.filter-item{
+    flex: 1 1 16.66%;
+    position: relative;
+}
+
+.filter-item>ul li{
+    padding: 20px 0 20px 20px;
+
+}
+.filter-item ul ul li{
+    padding: 10px 20px;
+}
+
+.name{
+    background: url('../img/catalog/drop-down-ico.png') center right 20px no-repeat;
+}
+
+
+.filter-item:hover{
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    box-shadow: -1px 0 1px #DFDFDF;
+    cursor: pointer;
+}
+.filter-item:last-child:hover{
+    border-right: none;
+}
+
+.filter-item .select li:hover{
+    background-color: #f7f7f7;
+    color: #f14a58;
+    cursor: pointer;
+}
+.filter-item .select{
+    border: 1px solid #d2d2d2;
+    box-shadow: -1px 2px 3px #DFDFDF;
+}
+
+.select{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    left: -10000px;
+    width: calc(100% + 2px);
+    z-index: 1000;
+}
+
+.filter-item ul:hover .select{
+    left: -1px;;
+}
+
+.selected{
+    background-color: #f7f7f7;
+}
+
+.catalog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item{
+    flex: 0 1 23%;
+    padding-top: 50px;
+}
+
+
+
+figcaption{
+    text-align: center;
+    padding: 20px 0;
+}
+figcaption span{
+    display: block;
+    padding-top: 10px;
+}
+
+.extra-info{
+    display: inline;
+    font-family: "Crimson", sans-serif;
+    font-style: italic;
+    color: #757575;
+}
+
+.offer{
+    text-align: center;
+    padding: 70px 0 40px;
+}
+
+.offer p:first-child{
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+
+.offer p strong{
+    color: #f14a58;
+}
+
+p.extra-info{
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+
+.img-wrap{
+    display: table;
+    background: #000;
+    position: relative;
+    z-index: 100;
+}
+
+.img-wrap img{
+    display: table-cell;
+}
+
+.img-wrap:hover img{
+    opacity: 0.5;
+}
+
+.img-wrap:hover .view-item{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.view-item{
+    position: absolute;
+    color: #f14a58;
+    top: calc(50% - 14px);
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+.banner{
+    display: flex;
+    min-height: 385px;
+}
+
+.adidas{
+    flex: 1 1 50%;
+    background: url('../img/catalog/banner-adidas.png') center center no-repeat;
+    background-size: cover;
+}
+
+.jeans{
+    flex: 1 1 25%;
+    background: url('../img/catalog/banner-jeans.png') center center no-repeat;
+    background-size: cover;
+}
+
+.banner-bag{
+    flex: 1 1 25%;
+    background: url('../img/catalog/banner-bag.png') center center no-repeat;
+    background-size: cover;
+}

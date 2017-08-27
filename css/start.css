@@ -125,25 +125,10 @@ position: absolute;
   text-align: center;
 }
 
-.arrivals button{
-  display: block;
-  margin: 100px auto;
-  font-size: 3rem;
-  width: 30%;
-  padding: 30px 0;
-  border: 1px solid grey;
-  background: transparent;
-}
-
 .slider{
   border-bottom: 1px solid #d9d9d9;
 }
 
-
-.button:hover{
-  border-color: #f14a58;
-  color: #f14a58;
-}
 
 .handbag{
   display: none;
@@ -168,9 +153,7 @@ position: absolute;
   }
 
   
-  .arrivals button{
-    width: 40%;
-  }
+  
 
   
 
@@ -248,9 +231,6 @@ position: absolute;
     display: none;
   }
 
-  .arrivals button{
-    font-size: 2rem;
-    width: 50%;
-  }
+
 
 }
