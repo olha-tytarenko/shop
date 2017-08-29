@@ -25,18 +25,9 @@
 }
 
 
-.filter-item:hover{
-    border-left: 1px solid #d2d2d2;
-    border-right: 1px solid #d2d2d2;
-    box-shadow: -1px 0 1px #DFDFDF;
-    cursor: pointer;
-}
-.filter-item:last-child:hover{
-    border-right: none;
-}
+
 
 .filter-item .select li:hover{
-    background-color: #f7f7f7;
     color: #f14a58;
     cursor: pointer;
 }
@@ -52,10 +43,6 @@
     left: -10000px;
     width: calc(100% + 2px);
     z-index: 1000;
-}
-
-.filter-item ul:hover .select{
-    left: -1px;;
 }
 
 .selected{
@@ -162,4 +149,125 @@ p.extra-info{
     flex: 1 1 25%;
     background: url('../img/catalog/banner-bag.png') center center no-repeat;
     background-size: cover;
+}
+
+@media (min-width: 1025px){
+    .filter-item ul:hover .select{
+        left: -1px;;
+    }
+    .filter-item:hover{
+        border-left: 1px solid #d2d2d2;
+        border-right: 1px solid #d2d2d2;
+        box-shadow: -1px 0 1px #DFDFDF;
+        cursor: pointer;
+    }
+    .filter-item:last-child:hover{
+        border-right: none;
+    }
+
+    .filter-item .select li:hover{
+        background-color: #f7f7f7;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .filter-item>ul>li::after{
+        content: ',';
+    }
+
+    .name{
+        background: none;
+        color: #a8a8a8;
+    }
+
+    .filter-item:last-child ul>li.name::after{
+        content: '';
+    }
+
+    .filters{
+        justify-content: flex-start;
+        padding-left: 50px;
+    }
+
+    .filter-item{
+        flex: none;
+        position: static;
+    }
+
+    .select{
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1000;
+        left: 1px;
+        height: 420px;
+        list-style-type: disc;
+        padding-left: 0;
+    }
+
+    .filter-item .select{
+        border: none;
+        box-shadow: none;
+        width: calc(100% / 3);
+        color: #a8a8a8;
+    }
+    .filter-item .select li{
+        padding-left: 0;
+        margin-left: 88px;
+    }
+
+    .filter-item:nth-child(3n) .select{
+        right: 0px;
+        left: calc((100% / 3) * 2 - 2px);
+        width: calc(100% / 3 + 2px);
+        background-color: aquamarine;
+    }
+
+    .filter-item:nth-child(2) .select, .filter-item:nth-child(5) .select{
+        left: calc(100% / 3);
+        background-color: pink;
+    }
+
+    .filter-item:nth-child(4) .select, .filter-item:nth-child(1) .select{
+        left: 0;
+        background-color: brown;
+    }
+    .filter-item:nth-child(4) .select, .filter-item:nth-child(5) .select,
+    .filter-item:nth-child(6) .select{
+        bottom: -280px;
+    }
+
+    .filter-item:nth-child(1) .select, .filter-item:nth-child(2) .select,
+    .filter-item:nth-child(3) .select{
+        border-top: 1px solid #d2d2d2;
+    }
+
+    .filters:hover{
+        cursor: pointer;
+    }
+
+    .select li.first-child{
+        list-style-type: none;
+        color: black;
+        font-size: 1.2rem;
+        padding-top: 20px;
+        margin-left: 70px;
+    }
+
+    .select li.first-child:hover{
+        color: black;
+        cursor: default;
+    }
+
+    .selected-filter{
+        color: #f14a58;
+    }
+    .filter-item .select .not-selected{
+        color: black;
+    }
+    .filter-item .select .not-selected:hover{
+        color: black;
+    }
+
 }
