@@ -1,50 +1,63 @@
 window.addEventListener('load', () => {
 
-  setFilterHeaders();
   let isFilterOpened = false;
-  let filters = document.getElementsByClassName('filters')[0];
+  let isFilterHeadersSet = false;
+  let filters = document.querySelector('.filters');
+
+
   filters.addEventListener('click', (event) => {
     console.log(event.target.nodeName);
+
     if (event.target.nodeName === 'DIV'){
       let allSelects = document.getElementsByClassName('select');
       if(isFilterOpened){
         for (let i = 0; i < allSelects.length; i++){
-          allSelects[i].style.display = 'none';  
+          allSelects[i].className += ' hide-filters'; 
         }
+        removeFilterHeaders();
       } else {
         for (let i = 0; i < allSelects.length; i++){
-          allSelects[i].style.display = 'block';
+          allSelects[i].className = allSelects[i].className.replace('hide-filters', '');
         }
+        setFilterHeaders();
       }
       isFilterOpened = !isFilterOpened;
     } else {
 
       let item = event.target;
-      clearAllClass(item);
-      console.log(item.parentNode);
+      if (document.documentElement.clientWidth > 1024){
 
-      if (item.innerHTML === 'Not selected'){
-        item.className = 'not-selected';
-        let box = item.previousElementSibling;
-        while(box.previousElementSibling){
-          box = box.previousElementSibling;
+        if (item.innerHTML === 'Not selected'){
+          // change brand-name,
+        } else if (item.className !== 'name') {
+          console.log('hello');
         }
-        changeFilterName(item.parentNode.previousElementSibling, box.innerHTML, 'name');
 
-      } else if (item.previousElementSibling) {
-
-        console.log(item.previousElementSibling);
-        item.className = 'selected-filter';
-        changeFilterName(item.parentNode.previousElementSibling, item.innerHTML, 'selected-filter');
+      } else {
+        clearAllClass(item);
+        if (item.innerHTML === 'Not selected'){
+          item.className = 'not-selected';
+          let box = item.previousElementSibling;
+          while(box.previousElementSibling){
+            box = box.previousElementSibling;
+          }
+          changeFilterName(item.parentNode.previousElementSibling, box.innerHTML, 'name');
+        } else if (item.previousElementSibling) {
+          item.className = 'selected-filter';
+          changeFilterName(item.parentNode.previousElementSibling, item.innerHTML, 'selected-filter');
+        }
       }
-
-
     }
-
-
   });
 
 
+
+  function removeFilterHeaders(){
+    let allSelects = document.getElementsByClassName('select');
+    for (let i = 0; i < allSelects.length; i++){
+      allSelects[i].removeChild(allSelects[i].firstChild);
+    }
+  }
 
 
   function setFilterHeaders(){

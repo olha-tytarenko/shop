@@ -6,7 +6,6 @@
 }
 
 
-
 .filter-item{
     flex: 1 1 16.66%;
     position: relative;
@@ -31,7 +30,7 @@
     color: #f14a58;
     cursor: pointer;
 }
-.filter-item .select{
+.select{
     border: 1px solid #d2d2d2;
     box-shadow: -1px 2px 3px #DFDFDF;
 }
@@ -80,7 +79,7 @@ figcaption span{
 
 .offer{
     text-align: center;
-    padding: 70px 0 40px;
+    padding: 70px 50px 40px 70px;
 }
 
 .offer p:first-child{
@@ -103,6 +102,7 @@ p.extra-info{
     background: #000;
     position: relative;
     z-index: 100;
+    margin: 0 auto;
 }
 
 .img-wrap img{
@@ -161,9 +161,7 @@ p.extra-info{
         box-shadow: -1px 0 1px #DFDFDF;
         cursor: pointer;
     }
-    .filter-item:last-child:hover{
-        border-right: none;
-    }
+
 
     .filter-item .select li:hover{
         background-color: #f7f7f7;
@@ -172,31 +170,8 @@ p.extra-info{
 
 
 @media (min-width: 768px) and (max-width: 1024px){
-    .filter-item>ul>li::after{
-        content: ',';
-    }
-
-    .name{
-        background: none;
-        color: #a8a8a8;
-    }
-
-    .filter-item:last-child ul>li.name::after{
-        content: '';
-    }
-
-    .filters{
-        justify-content: flex-start;
-        padding-left: 50px;
-    }
-
-    .filter-item{
-        flex: none;
-        position: static;
-    }
 
     .select{
-        display: none;
         position: absolute;
         background-color: white;
         z-index: 1000;
@@ -206,7 +181,7 @@ p.extra-info{
         padding-left: 0;
     }
 
-    .filter-item .select{
+    .select{
         border: none;
         box-shadow: none;
         width: calc(100% / 3);
@@ -217,34 +192,29 @@ p.extra-info{
         margin-left: 88px;
     }
 
-    .filter-item:nth-child(3n) .select{
+
+    .positioning-to-right{
         right: 0px;
-        left: calc((100% / 3) * 2 - 2px);
-        width: calc(100% / 3 + 2px);
+        left: calc((100% / 3) * 2);
         background-color: aquamarine;
     }
 
-    .filter-item:nth-child(2) .select, .filter-item:nth-child(5) .select{
+    .positioning-to-center{
         left: calc(100% / 3);
         background-color: pink;
     }
 
-    .filter-item:nth-child(4) .select, .filter-item:nth-child(1) .select{
+    .positioning-to-left{
         left: 0;
         background-color: brown;
     }
-    .filter-item:nth-child(4) .select, .filter-item:nth-child(5) .select,
-    .filter-item:nth-child(6) .select{
+
+    .positioning-to-bottom{
         bottom: -280px;
     }
 
-    .filter-item:nth-child(1) .select, .filter-item:nth-child(2) .select,
-    .filter-item:nth-child(3) .select{
+    .top-filter-border{
         border-top: 1px solid #d2d2d2;
-    }
-
-    .filters:hover{
-        cursor: pointer;
     }
 
     .select li.first-child{
@@ -270,4 +240,84 @@ p.extra-info{
         color: black;
     }
 
+    .hide-filters{
+        top: -3000px;
+    }
+
+    .first-catalog .item:last-child,
+    .second-catalog .item:nth-child(4n){
+        display: none;
+
+    }
+
+    .catalog .item{
+        flex: 0 1 30%;
+    }
+
+    .catalog{
+        padding: 0 50px 0 70px;
+    }
+    
+    .banner-bag{
+        display: none;
+    }
+
+    .adidas{
+        flex: 1 1 70%;
+    }
+
+    .jeans{
+        flex: 1 1 30%;
+    }
+}
+
+@media (max-width:787px){
+    .adidas{
+        flex: 1 1 100%;
+    }
+
+    .jeans, .banner-bag{
+        display: none;
+    }
+
+    .first-catalog .item:last-child, .first-catalog .item:nth-child(3),
+    .second-catalog .item:nth-child(4n){
+        display: none;
+    }
+
+    .catalog{
+        justify-content: space-around;
+    }
+
+    .item{
+        flex: 0 1 50%;
+    }
+}
+
+@media (max-width: 1024px){
+    .filter-item>ul>li::after{
+        content: ',';
+    }
+
+    .name{
+        background: none;
+    }
+
+    .filter-item:last-child ul>li.name::after{
+        content: '';
+    }
+
+    .filters{
+        justify-content: flex-start;
+        padding-left: 50px;
+    }
+
+    .filter-item{
+        flex: none;
+        position: static;
+    }
+
+    .filters:hover{
+        cursor: pointer;
+    }
 }
