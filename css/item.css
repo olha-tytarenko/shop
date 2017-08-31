@@ -1,10 +1,7 @@
 
-nav a:first-child, a.logo{
-    padding: 0;
-}
 
 .back-to-catalog{
-    padding: 30px 0 30px 20px;
+    padding: 20px 0 20px 20px;
     max-width: 1180px;
     margin: 0 auto;
     width: 85%;

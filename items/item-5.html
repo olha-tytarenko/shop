@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/common-styles.css">
-  <link rel="stylesheet" href="css/start.css">
-  <script src="js/main.js"></script>
-  <script src="js/start.js"></script>
-  <title>Start page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/common-styles.css">
+    <link rel="stylesheet" href="../css/item.css">
+    <script src="../js/main.js"></script>
+    <title>Item</title>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="header-first-line">
-        <a href="start.html" class="logo">Template</a>
-        <a href="start.html" class="logo-mobile">TL</a>
+        <a href="../start.html" class="logo">Template</a>
+        <a href="../start.html" class="logo-mobile">TL</a>
         <div class="user-options">
           <a href="#" class="sign-in">Email sign in</a>
           <div>
-            <a href="shopping-bag.html" class="bag">Bag £<span id="totalCost"></span> (<span id="count">0</span>)</a>
+            <a href="../shopping-bag.html" class="bag">Bag £<span id="totalCost"></span> (<span id="count">0</span>)</a>
             <span class="menu-btn menu-btn-closed" id="menuBtn"></span>
           </div>
         </div>
@@ -46,51 +45,48 @@
       </div>
     </header>
   </div>
-  <div class="slider">
-    <div class="slides" id="slides">
-      <button type="button" id="btnPrev"></button>
-      <button type="button" id="btnNext"></button>
-    </div>
-    <div class="slider-navigation">
-      <span class="slider-nav-button"></span>
-      <span class="slider-nav-button"></span>
-      <span class="slider-nav-button"></span>
-    </div>
+  <div class="container">
+    <a href="../catalog.html" class="back-to-catalog">< Back to catalog</a>
   </div>
-  <div class="banners">
-    <a href="item.html" class="nike">
-      <p>Nike red<span>New</span></p>
-    </a>
-    <a href="catalog.html" class="caps-hats">
-      <p>Caps & Hats<span>Sale -50%</span></p>
-    </a>
-    <a href="catalog.html" class="handbag">
-      <p>Sale<span>-70%</span></p>
-    </a>
+  <div class="containr">
+    <article class="item">
+
+          <div class="item-banner">
+              <div class="full-img"><img src="../img/item/item-1.png"></div>
+              
+              <div class="thumbs">
+                  <div><img src="../img/item/item-1.png"></div>
+                  <div><img src="../img/item/item-2.png"></div>
+                  <div><img src="../img/item/item-3.png"></div>
+              </div>
+            </div>
+
+
+        <section class="item-description">
+          <h2>Dark classic fit suit</h2>
+          <p class="description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
+          <p class="price">£<span id="price">220.30</span></p>
+          <div class="parameters">
+            <span>Size:</span>
+            <input type="radio" name="size" id="uk52" checked><label for="uk52">UK 52</label>
+            <input type="radio" name="size" id="uk54"><label for="uk54">UK 54</label>
+            <input type="radio" name="size" id="uk56"><label for="uk56">UK 56</label>
+          </div>
+          <div class="parameters">
+              <span>Color:</span>
+              <input type="radio" name="color" id="black"><label for="black">Black</label>
+              <input type="radio" name="color" id="blue" checked><label for="blue">Blue</label>
+          </div>
+          <button class="button">Add to bag</button>
+        </section>
+    </article>
   </div>
   <div class="container">
-    <section class="arrivals">
-      <h2>New arrivals</h2>
-      <div class="arrivals-goods">
-        <figure>
-          <img src="img/new-arrivals-1.png" />
-          <figcaption>Straight Leg Jeans<span class="price">55.00</span></figcaption>
-        </figure>
-        <figure>
-          <img src="img/new-arrivals-2.png" />
-          <figcaption>Boyfriend T-Shirt with Bohemian Print<span class="price">55.00</span></figcaption>
-        </figure>
-        <figure>
-          <img src="img/new-arrivals-3.png" />
-          <figcaption>Only Busted Knee Jean<span class="price">55.00</span></figcaption>
-        </figure>
-        <figure>
-          <img src="img/new-arrivals-4.png" />
-          <figcaption>Only Skinny Jeans<span class="price">55.00</span></figcaption>
-        </figure>
-      </div>
-      <button class="button" type="button">All arrivals</button>
-    </section>
+    <div class="banner">
+      <div class="adidas"></div>
+      <div class="jeans"></div>
+      <div class="banner-bag"></div>
+    </div>
   </div>
   <div class="container">
     <footer class="additional-information">
@@ -133,9 +129,7 @@
   </div>
   <footer class="footer">
     <p class="copyrignt">&copy;2010–2015, The Template Group inc.</p>
-    <div>
-      <p class="share">Share<span>1111</span></p>
-    </div>
+    <div><p class="share">Share<span>1111</span></p></div>
     <ul>
       <li><a href="#">Legal notice</a></li>
       <li><a href="#">Privacy policy</a></li>
@@ -143,5 +137,4 @@
     </ul>
   </footer>
 </body>
-
 </html>

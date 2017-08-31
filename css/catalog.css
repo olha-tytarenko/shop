@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    width: 85%;
 }
 
 
@@ -15,6 +16,7 @@
     padding: 20px 0 20px 20px;
 
 }
+
 .filter-item ul ul li{
     padding: 10px 20px;
 }
@@ -253,10 +255,6 @@ p.extra-info{
     .catalog .item{
         flex: 0 1 30%;
     }
-
-    .catalog{
-        padding: 0 50px 0 70px;
-    }
     
     .banner-bag{
         display: none;
@@ -285,10 +283,6 @@ p.extra-info{
         display: none;
     }
 
-    .catalog{
-        justify-content: space-around;
-    }
-
     .item{
         flex: 0 1 50%;
     }
@@ -309,7 +303,7 @@ p.extra-info{
 
     .filters{
         justify-content: flex-start;
-        padding-left: 50px;
+        overflow: hidden;
     }
 
     .filter-item{

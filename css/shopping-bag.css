@@ -1,0 +1,152 @@
+.items-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 85%;
+    margin: 0 auto;
+    padding-top:30px;
+}
+
+
+.item{
+    flex: 0 1 50%;
+    padding-bottom: 70px;
+    display: flex;
+}
+
+.info{
+    position: relative;
+}
+
+.info p{
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+
+}
+
+.heading{
+    font-size: 2rem;
+    padding: 30px 0 30px 50px;
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+.img-wrap{
+    display: table;
+    background: #000;
+    position: relative;
+    z-index: 100;
+}
+
+.img-wrap img{
+    display: table-cell;
+}
+
+.img-wrap:hover img{
+    opacity: 0.5;
+}
+
+.img-wrap:hover .view-item{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.view-item{
+    position: absolute;
+    color: #f14a58;
+    top: calc(50% - 14px);
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    visibility: hidden;
+}
+
+.item-description{
+    padding-left: 15px;
+}
+
+.item-description p span{
+    display: block;
+    padding: 5px 0;
+    font-weight: normal;
+
+}
+
+p span.price{
+    font-size: 1.5rem;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.remove-btn{
+    background: transparent;
+    border: none;
+    padding: 10px 0;
+    color: #f14a58;
+    font-weight: bold;
+    outline: none;
+}
+
+.remove-btn:hover{
+    color: #C91825;
+}
+
+.item-description h3{
+    font-size: 1.3rem;
+}
+
+.info p strong{
+    color: #f14a58;
+}
+
+
+.buy{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.button{
+    padding: 20px 0;
+}
+.total-cost{
+    text-align: right;
+    font-weight: normal;
+    
+}
+.total-cost span{
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.clear-bag-btn{
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    outline: none;
+}
+
+.clear-bag-btn:hover{
+    color: #323131;
+}
+
+
+@media (max-width: 768px) {
+    .item, .item-description{
+        flex: 0 1 100%;
+    }
+    .button{
+        width: 35%;
+    }
+
+}

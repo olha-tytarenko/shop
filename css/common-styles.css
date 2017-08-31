@@ -11,11 +11,6 @@ body{
    margin: 0 auto;
 }
 
-a.logo, nav a:first-child{
-  padding-left: 20px;
-}
-
-
 header, footer{
   max-width: 1180px;
   margin: 0 auto;
