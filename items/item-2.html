@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/common-styles.css">
     <link rel="stylesheet" href="../css/item.css">
     <script src="../js/main.js"></script>
+    <script src="../js/item.js"></script>
     <title>Item</title>
 </head>
 <body>
@@ -20,7 +21,7 @@
         <div class="user-options">
           <a href="#" class="sign-in">Email sign in</a>
           <div>
-            <a href="../shopping-bag.html" class="bag">Bag £<span id="totalCost"></span> (<span id="count">0</span>)</a>
+            <a href="../shopping-bag.html" class="bag">Bag £<span id="totalCost">0.00</span> (<span id="count">0</span>)</a>
             <span class="menu-btn menu-btn-closed" id="menuBtn"></span>
           </div>
         </div>
@@ -52,18 +53,18 @@
     <article class="item">
 
           <div class="item-banner">
-              <div class="full-img"><img src="../img/item/item-1.png"></div>
+              <div class="full-img"><img src="../img/item/item-1.jpg"></div>
               
               <div class="thumbs">
-                  <div><img src="../img/item/item-1.png"></div>
-                  <div><img src="../img/item/item-2.png"></div>
-                  <div><img src="../img/item/item-3.png"></div>
+                  <div class="chosen"><img src="../img/item/item-1.jpg"></div>
+                  <div><img src="../img/item/item-2.jpg"></div>
+                  <div><img src="../img/item/item-3.jpg"></div>
               </div>
             </div>
 
 
         <section class="item-description">
-          <h2>Dark classic fit suit</h2>
+          <h2>Neck Knitted Jumper</h2>
           <p class="description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs</p>
           <p class="price">£<span id="price">120.00</span></p>
           <div class="parameters">
@@ -77,7 +78,7 @@
               <input type="radio" name="color" id="black"><label for="black">Black</label>
               <input type="radio" name="color" id="blue" checked><label for="blue">Blue</label>
           </div>
-          <button class="button">Add to bag</button>
+          <button class="button" id="addToBagBtn">Add to bag</button>
         </section>
     </article>
   </div>

@@ -25,6 +25,21 @@
     background: url('../img/catalog/drop-down-ico.png') center right 20px no-repeat;
 }
 
+.filter-item .selected-filter {
+    background-color: #f7f7f7;
+    padding: 9px 0 8px 20px;
+}
+.selected-filter .filter-name{
+    font-size: 0.7rem;
+    color: black;
+}
+
+.selected-filter span{
+    font-size: 1rem;
+    color: #f14a58;
+    display: block;
+    padding-top: 5px;
+}
 
 
 
@@ -44,10 +59,6 @@
     left: -10000px;
     width: calc(100% + 2px);
     z-index: 1000;
-}
-
-.selected{
-    background-color: #f7f7f7;
 }
 
 .catalog{
@@ -173,7 +184,7 @@ p.extra-info{
 
 @media (min-width: 768px) and (max-width: 1024px){
 
-    .select{
+ /*   .select{
         position: absolute;
         background-color: white;
         z-index: 1000;
@@ -189,11 +200,12 @@ p.extra-info{
         width: calc(100% / 3);
         color: #a8a8a8;
     }
+
     .filter-item .select li{
         padding-left: 0;
         margin-left: 88px;
     }
-
+*/
 
     .positioning-to-right{
         right: 0px;
@@ -215,8 +227,9 @@ p.extra-info{
         bottom: -280px;
     }
 
-    .top-filter-border{
+    .positioning-to-top{
         border-top: 1px solid #d2d2d2;
+        top: 59px;
     }
 
     .select li.first-child{
@@ -235,6 +248,8 @@ p.extra-info{
     .selected-filter{
         color: #f14a58;
     }
+
+
     .filter-item .select .not-selected{
         color: black;
     }
@@ -245,6 +260,8 @@ p.extra-info{
     .hide-filters{
         top: -3000px;
     }
+
+
 
     .first-catalog .item:last-child,
     .second-catalog .item:nth-child(4n){
@@ -289,16 +306,33 @@ p.extra-info{
 }
 
 @media (max-width: 1024px){
-    .filter-item>ul>li::after{
+    .filter-item>ul>li>span::after{
         content: ',';
+        padding-right: 10px;
     }
 
     .name{
         background: none;
     }
 
-    .filter-item:last-child ul>li.name::after{
+    .filter-item:last-child ul>li.name>span::after{
         content: '';
+    }
+
+    .selected-filter span{
+        background-color: transparent;
+        font-size: 1rem;
+        padding: 20px 0 20px 20px;
+        
+    }
+    
+    .selected-filter .filter-name{
+        display: none;
+    }
+
+    .filter-item .selected-filter{
+        background: transparent;
+        padding: 0;
     }
 
     .filters{

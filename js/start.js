@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-
+  let storage = window.localStorage;
   class slider {
     constructor() {
       this._slidesDesktop = ['img/slider/desktop/slide-1.png', 'img/slider/desktop/slide-2.png', 'img/slider/desktop/slide-3.png'];
@@ -21,7 +21,8 @@ window.addEventListener('load', () => {
           if (this._currentSlide % 2 === 0) {
             location.href = 'catalog.html';
           } else {
-            location.href = 'item.html';
+            storage.setItem("itemFromCatalog", JSON.stringify({hrefToItem: 'items/item-5.html', imgUrl: 'img/catalog/item-5.png'}));
+            location.href = 'items/item-5.html';
           }
         }
       });
@@ -56,7 +57,7 @@ window.addEventListener('load', () => {
     startSlider() {
       this._intervalFunction = setInterval(() => {
         this.setImage(this.getImageUrl(), this._currentSlide);
-      }, 2000);
+      }, 10000);
     }
 
     clearIntervalFunction() {
@@ -91,5 +92,13 @@ window.addEventListener('load', () => {
       }
     }
   }
+
+
+  let nike = document.querySelector('.nike');
+  nike.addEventListener('click', (event) => {
+    event.preventDefault();
+    storage.setItem("itemFromCatalog", JSON.stringify({hrefToItem: 'items/item-8.html', imgUrl: 'img/catalog/item-8.png'}));
+    location.href = 'items/item-8.html';
+  });
 
 });

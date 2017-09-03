@@ -1,5 +1,8 @@
 window.addEventListener('load', () => {
 
+  let storage = window.localStorage;
+  storage.removeItem("itemFromCatalog");
+
   let isFilterOpened = false;
   let isFilterHeadersSet = false;
   let filters = document.querySelector('.filters');
@@ -7,62 +10,46 @@ window.addEventListener('load', () => {
 
   filters.addEventListener('click', (event) => {
     console.log(event.target.nodeName);
+    let item = event.target;
+    if (document.documentElement.clientWidth > 1024) {
 
-    if (event.target.nodeName === 'DIV'){
-      let allSelects = document.getElementsByClassName('select');
-      if(isFilterOpened){
-        for (let i = 0; i < allSelects.length; i++){
-          allSelects[i].className += ' hide-filters'; 
-        }
-        removeFilterHeaders();
-      } else {
-        for (let i = 0; i < allSelects.length; i++){
-          allSelects[i].className = allSelects[i].className.replace('hide-filters', '');
-        }
-        setFilterHeaders();
-      }
-      isFilterOpened = !isFilterOpened;
-    } else {
+      if (item.classList[0] !== 'name') {
+        let filterHeaderElement = item.parentNode.parentNode.firstElementChild;
 
-      let item = event.target;
-      if (document.documentElement.clientWidth > 1024){
-
-        if (item.innerHTML === 'Not selected'){
-          // change brand-name,
-        } else if (item.className !== 'name') {
-          console.log('hello');
-        }
-
-      } else {
-        clearAllClass(item);
-        if (item.innerHTML === 'Not selected'){
-          item.className = 'not-selected';
-          let box = item.previousElementSibling;
-          while(box.previousElementSibling){
-            box = box.previousElementSibling;
+        if (item.innerHTML === 'Not selected') {
+          if (filterHeaderElement.lastElementChild.className !== 'filter-name') {
+            filterHeaderElement.removeChild(filterHeaderElement.lastElementChild);
+            filterHeaderElement.className = 'name';
           }
-          changeFilterName(item.parentNode.previousElementSibling, box.innerHTML, 'name');
-        } else if (item.previousElementSibling) {
-          item.className = 'selected-filter';
-          changeFilterName(item.parentNode.previousElementSibling, item.innerHTML, 'selected-filter');
+        } else if (filterHeaderElement.lastElementChild.className !== 'filter-name') {
+          filterHeaderElement.lastElementChild.innerHTML = item.innerHTML;
+        } else {
+          let filterName = filterHeaderElement.innerHTML;
+          let selectedFilter = item.innerHTML;
+          filterHeaderElement.className += ' selected-filter';
+          let span = document.createElement('span');
+          span.innerHTML = selectedFilter;
+          filterHeaderElement.appendChild(span);
         }
       }
+    } else if (document.documentElement.clientWidth > 768){
+      if (event.target.nodeName === 'DIV' || event.target.className){}
     }
   });
 
 
 
-  function removeFilterHeaders(){
+  function removeFilterHeaders() {
     let allSelects = document.getElementsByClassName('select');
-    for (let i = 0; i < allSelects.length; i++){
+    for (let i = 0; i < allSelects.length; i++) {
       allSelects[i].removeChild(allSelects[i].firstChild);
     }
   }
 
 
-  function setFilterHeaders(){
+  function setFilterHeaders() {
     let allSelects = document.getElementsByClassName('select');
-    for (let i = 0; i < allSelects.length; i++){
+    for (let i = 0; i < allSelects.length; i++) {
       let filterHeader = allSelects[i].previousElementSibling.innerHTML;
       let li = document.createElement('li');
       li.innerHTML = filterHeader;
@@ -72,25 +59,36 @@ window.addEventListener('load', () => {
   }
 
 
-  function clearAllClass(elem){
+  function clearAllClass(elem) {
     let boxElem = elem;
     elem.previousElementSibling;
-    while (elem){
-      if (elem.className !== 'first-child'){
+    while (elem) {
+      if (elem.className !== 'first-child') {
         elem.className = '';
       }
       elem = elem.previousElementSibling;
     }
     elem = boxElem.nextElementSibling;
-    while (elem){
+    while (elem) {
       elem.className = '';
       elem = elem.nextElementSibling;
     }
   }
 
-  function changeFilterName(element, content, className){
+  function changeFilterName(element, content, className) {
     element.innerHTML = content;
     element.className = className;
+  }
+
+
+  let linksToItems = document.querySelectorAll('.img-wrap a');
+  let itemImages = document.querySelectorAll('.img-wrap a img');
+  for (let i = 0; i < linksToItems.length; i++) {
+    linksToItems[i].addEventListener('click', (event) => {
+      event.preventDefault();
+      storage.setItem("itemFromCatalog", JSON.stringify({ hrefToItem: linksToItems[i].href, imgUrl: itemImages[i].src }));
+      location = linksToItems[i].href;
+    });
   }
 
 });

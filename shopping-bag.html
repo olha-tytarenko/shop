@@ -23,7 +23,7 @@
         <div class="user-options">
           <a href="#" class="sign-in">Email sign in</a>
           <div>
-            <a href="shopping-bag.html" class="bag">Bag £<span id="totalCost"></span> (<span id="count">0</span>)</a>
+            <a href="shopping-bag.html" class="bag">Bag £<span id="totalCost">0.00</span> (<span id="count">0</span>)</a>
             <span class="menu-btn menu-btn-closed" id="menuBtn"></span>
           </div>
         </div>
@@ -51,80 +51,11 @@
   <div class="container">
   <section>
     <div class="container">
-    <h2 class="heading"><a href="shoppinh-bag.html">Shopping bag</a></h2>
+    <h2 class="heading"><a href="#">Shopping bag</a></h2>
     </div>
     <div class="container">
     <div class="items-group">
-      <div class="item">
-        <div class="img-wrap"><a href="item.html"><img class="item-photo" src="img/catalog/item-2.png"></a>
-          <p class="view-item">View item</p>
-        </div>
-
-      <div class="item-description">
-        <h3>Only Skinny Jeans</h3>
-        <p>
-          <span class="price" id="price">£390.25</span>
-          <span>Color: Phillipa wash</span>
-          <span>Size: UK 17</span>
-          <span>Quantity: 1</span>
-        </p>
-        <button type="button" class="remove-btn">Remove item</button>
-      </div>
-    </div>
-      <div class="item">
-        <div class="img-wrap"><a href="item.html"><img class="item-photo" src="img/catalog/item-3.png"></a>
-          <p class="view-item">View item</p>
-        </div>
-
-      <div class="item-description">
-        <h3>Only Skinny Jeans</h3>
-
-        <p>
-          <span class="price" id="price">£390.25</span>
-          <span>Color: Phillipa wash</span>
-          <span>Size: UK 17</span>
-          <span>Quantity: 1</span>
-        </p>
-
-        <button type="button" class="remove-btn">Remove item</button>
-      </div>
-    </div>
-      <div class="item">
-        <div class="img-wrap"><a href="item.html"><img class="item-photo" src="img/catalog/item-6.png"></a>
-          <p class="view-item">View item</p>
-        </div>
-
-      <div class="item-description">
-        <h3>Only Skinny Jeans</h3>
-
-        <p>
-          <span class="price" id="price">£390.25</span>
-          <span>Color: Phillipa wash</span>
-          <span>Size: UK 17</span>
-          <span>Quantity: 1</span>
-        </p>
-
-        <button type="button" class="remove-btn">Remove item</button>
-      </div>
-    </div>
-      <div class="item">
-        <div class="img-wrap"><a href="item.html"><img class="item-photo" src="img/catalog/item-7.png"></a>
-          <p class="view-item">View item</p>
-        </div>
-
-      <div class="item-description">
-        <h3>Only Skinny Jeans</h3>
-
-        <p>
-          <span class="price" id="price">£390.25</span>
-          <span>Color: Phillipa wash</span>
-          <span>Size: UK 17</span>
-          <span>Quantity: 1</span>
-        </p>
-
-        <button type="button" class="remove-btn">Remove item</button>
-      </div>
-    </div>
+      
     </div>
   </div>
     <div class="info">
@@ -133,9 +64,9 @@
 
     </div>
     <div class="buy">
-      <button type="button" class="clear-bag-btn">Clear bag</button>
-      <button class="button" type="button">Buy now</button>
-      <div class="total-cost">Total cost<span>1 640.50</span></div>
+      <button type="button" class="clear-bag-btn" id="clearBtn">Clear bag</button>
+      <button class="button" type="button" id="buyBtn">Buy now</button>
+      <div class="total-cost">Total cost<span></span></div>
     </div>
 
   </section>
